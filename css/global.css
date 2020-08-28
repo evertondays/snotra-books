@@ -1,0 +1,34 @@
+:root {
+  --background: #f0f0f7;
+  --primary: #9871f5;
+  --gray: #c8c8c8;
+  --white: #fff;
+  --text: #1F2120;
+
+  font-size: 60%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100vh;
+}
+
+body {
+  background: var(--background);
+
+  font-family: 'Roboto', sans-serif;
+  color: var(--text);
+}
+
+@media (min-width: 700px) {
+  :root {
+    font-size: 62.5%;
+  }
+}
