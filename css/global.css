@@ -1,6 +1,7 @@
 :root {
   --background: #f0f0f7;
-  --primary: #9871f5;
+  --primary: #3689ff;
+  --primary-dark: #1B4580;
   --gray: #c8c8c8;
   --white: #fff;
   --text: #1F2120;
@@ -15,9 +16,22 @@
 }
 
 html,
-body,
-#root {
+body{
   height: 100vh;
+}
+
+input{
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+}
+
+input:focus{
+  outline: none;
+}
+
+button:focus {
+  outline:0;
+  
 }
 
 body {
@@ -25,6 +39,11 @@ body {
 
   font-family: 'Roboto', sans-serif;
   color: var(--text);
+}
+
+/* Ajuda para o JS */
+.invisible{
+  display: none;
 }
 
 @media (min-width: 700px) {
