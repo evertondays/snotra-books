@@ -1,0 +1,77 @@
+.books{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.book{
+  margin-top: 2rem;
+  display: flex;
+  padding: 1rem;
+  width: 60rem;
+  height: auto;
+  background-color: var(--gray);
+  border-radius: 1rem;
+}
+
+.book img{
+  height: 100%;
+  width: 100%;
+  max-width: 128px;
+}
+
+.book .infos{
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+}
+
+.book .infos h1{
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.book .infos h2{
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+.book .infos .description{
+  font-size: 1.5rem;
+  text-align: justify;
+  margin-top: 0.5rem;
+}
+
+.book .infos .date{
+  margin-top: 0.75rem;
+  font-size: 1.4rem;
+  font-style: italic;
+}
+
+.book .infos .button-div{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.book .infos .button-div button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--green);
+  border: none;
+  border-radius: 0.5rem;
+  color: var(--white);
+  padding: 1rem;
+
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.book .infos .button-div button:hover{
+  background: #228C3B;
+}
