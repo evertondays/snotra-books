@@ -29,10 +29,13 @@ function generateDiv(item){
 	let infos = document.createElement('div');
 	infos.classList.add('infos');
 
+	let divImage = document.createElement('div');
+	divImage.classList.add('image-div');
 	let img = document.createElement('img');
 	img.classList.add('img-livro');
 	img.src = item.volumeInfo.imageLinks.thumbnail;
-	book.appendChild(img);
+	divImage.appendChild(img);
+	book.appendChild(divImage);
 
 	let h1 = document.createElement('h1');
 	h1.innerHTML = item.volumeInfo.title;
