@@ -31,7 +31,7 @@
 			</button>
 		</div>
 		<div class="categories-button">
-			Ver categorias
+			Ver categorias <i class="fas fa-chevron-down"></i>
 		</div>
 		<div class="categories invisible">
 			<ul>
@@ -50,7 +50,7 @@
 				<li>Ficção Histórica</li>
 				<li>Horror</li>
 				<li>Infantojuvenil</li>
-				<li>Infantil</li>			
+				<li>Infantil</li>
 				<li>Romance</li>
 				<li>Finanças</li>
 			</ul>
@@ -59,7 +59,8 @@
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/js/all.min.js"
 		integrity="sha512-M+hXwltZ3+0nFQJiVke7pqXY7VdtWW2jVG31zrml+eteTP7im25FdwtLhIBTWkaHRQyPrhO2uy8glLMHZzhFog=="
-		crossorigin="anonymous"></script>
+		crossorigin="anonymous">
+	</script>
 
 	<script src="js/menu.js"></script>
 </body>

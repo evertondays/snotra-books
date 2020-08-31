@@ -1,16 +1,16 @@
 let menuButton = document.querySelector('.categories-button');
 let categories = document.querySelector('.categories');
 
-let menuViseble = false;
+let menuVisible = false;
 
 menuButton.addEventListener('click', (event) => {
-	if(menuViseble){
-		menuButton.innerHTML = 'Ver categorias';
+	if(menuVisible){
+		menuButton.innerHTML = 'Ver categorias <i class="fas fa-chevron-down"></i>';
 		categories.classList.add('invisible');
-		menuViseble = false;
+		menuVisible = false;
 	} else {
-		menuButton.innerHTML = 'Ocultar categorias';
+		menuButton.innerHTML = 'Ocultar categorias <i class="fas fa-chevron-up"></i>';
 		categories.classList.remove('invisible');
-		menuViseble = true;
+		menuVisible = true;
 	}
 })

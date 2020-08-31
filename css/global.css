@@ -4,6 +4,7 @@
   --primary-dark: #1B4580;
   --gray: #c8c8c8;
   --white: #fff;
+  --white-dark: #E6E6E6;
   --text: #1F2120;
 
   font-size: 60%;
@@ -20,9 +21,20 @@ body{
   height: 100vh;
 }
 
-input{
-  font-family: 'Roboto', sans-serif;
-  font-weight: bold;
+a{
+  text-decoration: none;
+}
+
+a:visited{
+  text-decoration: none;
+}
+
+a:link{
+  text-decoration: none;
+}
+
+a:active{
+  text-decoration: none;
 }
 
 input:focus{

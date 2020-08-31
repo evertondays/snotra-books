@@ -16,6 +16,10 @@
 
 .search input{
   width: 100%;
+  font-family: 'Work Sans', FontAwesome, sans-serif;
+  font-weight: 600;
+  letter-spacing: .1rem;
+  color: var(--text);
 }
 
 .search-button{
@@ -29,9 +33,13 @@
   font-size: 2.1rem;
   margin: 1rem 0 1rem;
   padding: 1rem;
-  border: solid 0.4rem var(--white);
+  font-family: Archivo, arial;
 
   cursor: pointer;
+}
+
+.categories-button svg{
+  margin-left: 1rem;
 }
 
 .categories{
@@ -40,6 +48,10 @@
 
   color: var(--text);
   border-radius: 0.5rem;
+}
+
+.categories a{
+  color: var(--text);
 }
 
 .categories li{
@@ -92,11 +104,15 @@
     width: 80%;
   }
 
+  #search-book{
+    height: 4rem;
+  }
+
   .search-button{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 3.5rem;
+    height: 4rem;
     padding: 0 2rem;
     border-radius: 90rem;
     background: var(--primary);
@@ -147,13 +163,19 @@
     border-radius: 5rem;
     padding: 1rem;
     font-size: 1.5rem;
+    cursor: pointer;
     white-space: nowrap;
+
+    transition: background-color 0.4s;
   }
 
-  @media screen and (min-width: 1000px) {
-    .categories ul{
-      grid-template-columns: repeat(9, auto);
-    }
+  .categories li:hover{
+    background-color: var(--white-dark);
   }
+}
 
+@media screen and (min-width: 1000px) {
+  .categories ul{
+    grid-template-columns: repeat(9, auto);
+  }
 }
