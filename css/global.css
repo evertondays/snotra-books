@@ -2,10 +2,12 @@
   --background: #f0f0f7;
   --primary: #3689ff;
   --primary-dark: #1B4580;
-  --gray: #c8c8c8;
-  --white: #fff;
+  --gray: #6c757d;
+  --white: #f8f9fa;
   --white-dark: #E6E6E6;
-  --text: #1F2120;
+  --text: #313131;
+
+  --green: #28a745;
 
   font-size: 60%;
 }
@@ -19,6 +21,8 @@
 html,
 body{
   height: 100vh;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 a{

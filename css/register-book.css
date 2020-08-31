@@ -1,4 +1,14 @@
+.container{
+  width: 100vw;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .books{
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -7,12 +17,18 @@
 
 .book{
   margin-top: 2rem;
-  display: flex;
-  padding: 1rem;
-  width: 60rem;
+  padding: 2rem;
+  width: 100%;
   height: auto;
   background-color: var(--gray);
   border-radius: 1rem;
+}
+
+.book .image-div{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
 }
 
 .book img{
@@ -24,7 +40,6 @@
 .book .infos{
   display: flex;
   flex-direction: column;
-  margin-left: 2rem;
 }
 
 .book .infos h1{
@@ -74,4 +89,41 @@
 
 .book .infos .button-div button:hover{
   background: #228C3B;
+}
+
+@media screen and (min-width: 800px) {  
+  .book{
+    display: flex;
+    padding: 1rem;
+    width: 60rem;
+    height: auto;
+  }
+  
+  .book img{
+    height: auto;
+    width: auto;
+  }
+  
+  .book .infos{
+    width: 100%;
+    height: 100%;
+    margin-left: 2rem;
+  }
+
+  .book .image-div{
+    display: block;
+    width: auto;
+    height: auto;
+  }
+
+  .book .infos .button-div{
+    margin-top: 100%;
+    margin-left: 100%;
+  }
+
+  .book .infos .button-div{
+    margin-top: 100%;
+    margin-left: 100%;
+    margin: 0;
+  }
 }
