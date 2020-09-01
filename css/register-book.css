@@ -92,17 +92,23 @@
 }
 
 .register-wrapper{
-  display: flex;
+  display: none;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: 4vh 96vh;
+  grid-template-areas: "a x"
+                       "r r";
+
+  width: 100vw;
+  height: 100vh;
   justify-content: center;
   align-items: center;
   position: fixed;
-  width: 100vw;
-  height: 100vh;
   background-color: rgba(0, 0, 0, 0.85);
   padding: 1rem 2.2rem;
 }
 
 .register{
+  grid-area: r;
   display: flex;
   flex-direction: column;
   padding: 0.8rem;
@@ -110,7 +116,7 @@
   height: auto;
   border-radius: 0.5rem;
   background-color: var(--white);
-  color: var(--text)
+  color: var(--text);
 }
 
 .register input{
@@ -121,16 +127,11 @@
 }
 
 .register label{
-  margin-left: 0.7rem;
-  margin-bottom: 0.5rem;
+  margin: 1rem 0 0.5rem  0.7rem;
 }
 
-.register input + label{
-  margin-top: 1rem;
-}
-
-.register textarea + label{
-  margin-top: 1rem;
+.register #first-label{
+  margin-top: 0 !important;
 }
 
 .register textarea{
@@ -168,13 +169,13 @@
   font-weight: bold;
 }
 
-.register input[type=number]::-webkit-inner-spin-button{ 
-  -webkit-appearance: none;
-}
-
-.register input[type=number]{ 
- -moz-appearance: textfield;
- appearance: textfield;
+.exit-button{
+  margin-left: 10fr;
+  float: right;
+  color: var(--white);
+  font-size: 4.5rem;
+  grid-area: x;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 800px) {  
