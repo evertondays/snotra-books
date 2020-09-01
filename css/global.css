@@ -41,13 +41,8 @@ a:active{
   text-decoration: none;
 }
 
-input:focus{
+input, select, button, textarea:focus{
   outline: none;
-}
-
-button:focus {
-  outline:0;
-  
 }
 
 body {
