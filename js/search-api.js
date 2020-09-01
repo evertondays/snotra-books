@@ -14,8 +14,11 @@ inputSearch.addEventListener('change', (event) => {
 		.then(function (response) {
 			const items = response.data.items;
 			
+			let index = 0;
+
 			items.map((item) =>{
-				generateDiv(item);
+				generateDiv(item, index);
+				index++;
 			})
 		})
 		.catch(function (error) {
@@ -23,7 +26,7 @@ inputSearch.addEventListener('change', (event) => {
 		})
 })
 
-function generateDiv(item){
+function generateDiv(item, index){
 	let book = document.createElement('div');
 	book.classList.add('book');
 	let infos = document.createElement('div');
@@ -82,10 +85,13 @@ function generateDiv(item){
 	let divButton = document.createElement('div');
 	divButton.classList.add('button-div');
 	let button = document.createElement('button');
-	description.classList.add('pre-register')
+	button.classList.add('pre-register');
+	button.setAttribute('onclick', `return showRegisterDivByAPI('book-${index}')`);
 	button.innerHTML = "Cadastrar";
 	divButton.appendChild(button);
 	infos.appendChild(divButton);
+
+	book.setAttribute('id', `book-${index}`);
 
 	book.appendChild(infos);
 	books.appendChild(book);
