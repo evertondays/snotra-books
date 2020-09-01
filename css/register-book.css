@@ -91,6 +91,92 @@
   background: #228C3B;
 }
 
+.register-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 1rem 2.2rem;
+}
+
+.register{
+  display: flex;
+  flex-direction: column;
+  padding: 0.8rem;
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  background-color: var(--white);
+  color: var(--text)
+}
+
+.register input{
+  height: 2.8rem;
+  border: 1px solid var(--primary);
+  border-radius: 10rem;
+  padding-left: 0.7rem;
+}
+
+.register label{
+  margin-left: 0.7rem;
+  margin-bottom: 0.5rem;
+}
+
+.register input + label{
+  margin-top: 1rem;
+}
+
+.register textarea + label{
+  margin-top: 1rem;
+}
+
+.register textarea{
+  border: 1px solid var(--primary) !important;
+  border-radius: 1rem;
+  padding-left: 0.7rem;
+  font-family: 'Roboto', sans-serif;
+  resize: vertical;
+  margin: 0 0.1rem;
+}
+
+.register select{
+  height: 2.8rem;
+  border: 1px solid var(--primary);
+  border-radius: 10rem;
+  padding: 0 0.7rem;
+}
+
+.register-button{
+  padding: 1.5rem;
+  color: var(--white);
+  background-color: var(--primary);
+  border: 2px solid var(--primary);
+  border-radius: 1rem;
+  margin-top: 2rem;
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.register-button:hover{
+  background-color: var(--white);
+  border: 2px solid var(--green);
+  color: var(--green);
+  font-weight: bold;
+}
+
+.register input[type=number]::-webkit-inner-spin-button{ 
+  -webkit-appearance: none;
+}
+
+.register input[type=number]{ 
+ -moz-appearance: textfield;
+ appearance: textfield;
+}
+
 @media screen and (min-width: 800px) {  
   .book{
     display: flex;
@@ -125,5 +211,9 @@
     margin-top: 100%;
     margin-left: 100%;
     margin: 0;
+  }
+
+  .register{
+    padding: 2rem;
   }
 }

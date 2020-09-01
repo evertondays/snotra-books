@@ -16,9 +16,51 @@
 	<title>Hello, world!</title>
 </head>
 <body>
-	<div class="container">
-	<input class="input-search" type="text" id="search-book-api" />
 
+	<div class="register-wrapper">
+			<form class="register" action="">
+				<label for="input-title">Título</label>
+				<input id="input-title" type="text">
+
+				<label for="input-authors">Autores</label>
+				<input id="input-authors" type="text">
+
+				<label for="input-description">Descrição</label>
+				<textarea id="input-description" rows="3" type="text"></textarea>
+
+				<label for="input-date">Ano de lançamento</label>
+				<input id="input-date" type="number">
+
+				<label for="input-category">Categoria</label>
+				<select id="input-category">
+					<option selected disabled>Selecione uma opção</option>
+					<option value="Ação">Ação</option>
+					<option value="Antologias">Antologias</option>
+					<option value="Autoajuda">Autoajuda</option>
+					<option value="Aventura">Aventura</option>
+					<option value="Biografia">Biografia</option>
+					<option value="Ciência">Ciência</option>
+					<option value="Contos">Contos</option>
+					<option value="Crônica">Crônica</option>
+					<option value="Drama">Drama</option>
+					<option value="Épico">Épico</option>
+					<option value="Fantasia">Fantasia</option>
+					<option value="Ficção Ciêntifica">Ficção Ciêntifica</option>
+					<option value="Ficção Histórica">Ficção Histórica</option>
+					<option value="Hístoria">Hístoria</option>
+					<option value="Horror">Horror</option>
+					<option value="Infantojuvenil">Infantojuvenil</option>
+					<option value="Infantil">Infantil</option>
+					<option value="Romance">Romance</option>
+				</select>
+
+				<button class="register-button" type="submit">Confirmar cadastro!</button>
+			</form>
+		</div>
+	</div>
+
+	<div class="container">
+		<input class="input-search" type="text" id="search-book-api" />
 		<div class="books">
 			<div class="book">
 				<div class="image-div">
