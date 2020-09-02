@@ -20,8 +20,12 @@
   padding: 2rem;
   width: 100%;
   height: auto;
-  background-color: var(--gray);
+  background-color: var(--white);
   border-radius: 1rem;
+
+  -webkit-box-shadow: 8px 7px 4px -2px rgba(0,0,0,0.33);
+  -moz-box-shadow: 8px 7px 4px -2px rgba(0,0,0,0.33);
+  box-shadow: 8px 7px 4px -2px rgba(0,0,0,0.33);
 }
 
 .book .image-div{
@@ -136,11 +140,22 @@
 
 .register textarea{
   border: 1px solid var(--primary) !important;
-  border-radius: 1rem;
+  border-radius: 0.4rem;
   padding-left: 0.7rem;
   font-family: 'Roboto', sans-serif;
-  resize: vertical;
+  resize: none;
   margin: 0 0.1rem;
+}
+
+textarea::-webkit-scrollbar {
+  width: 0.5rem;
+  background-color: var(--background);
+  margin-right: 100%;
+  height: 80%;
+}
+
+textarea::-webkit-scrollbar-thumb {
+  background-color: var(--primary);
 }
 
 .register select{
