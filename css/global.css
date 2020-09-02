@@ -1,12 +1,11 @@
 :root {
-  --background: #f0f0f7;
+  --background: #f4f4f4;
   --primary: #3689ff;
-  --primary-dark: #1B4580;
-  --gray: #6c757d;
+  --primary-dark: #2867BF;
+  --gray: #a7a7a7;
   --white: #f8f9fa;
   --white-dark: #E6E6E6;
   --text: #313131;
-
   --green: #28a745;
 
   font-size: 60%;
@@ -16,6 +15,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 html,
