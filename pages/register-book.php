@@ -23,16 +23,16 @@
 
 		<form class="register" action="" autocomplete="off">
 			<label id="first-label" for="input-title">Título</label>
-			<input id="input-title" type="text">
+			<input id="input-title" type="text" require>
 
 			<label for="input-authors">Autores</label>
-			<input id="input-authors" type="text">
+			<input id="input-authors" type="text" require>
 
 			<label for="input-description">Descrição</label>
-			<textarea id="input-description" rows="3" type="text"></textarea>
+			<textarea id="input-description" rows="5" type="text" require></textarea>
 
 			<label for="input-date">Ano de lançamento</label>
-			<input id="input-date" class="year" type="text">
+			<input id="input-date" class="year" type="text" require>
 
 			<label for="input-category">Categoria</label>
 			<select id="input-category">
@@ -67,20 +67,6 @@
 	<div class="container">
 		<input class="input-search" type="text" id="search-book-api" />
 		<div class="books">
-			<div id="book-1" class="book">
-				<div class="image-div">
-					<img src="../images/livro.jpg" class="img-livro">
-				</div>
-				<div class="infos">
-					<h1>Harry Potter</h1>
-					<h2>Lucas Hernandes</h2>
-					<div class="description">oi</div>
-					<div class="date">2004</div>
-					<div class="button-div">
-						<button class="pre-register" onclick="return showRegisterDivByAPI('book-1')">Cadastrar</button>
-					</div>
-				</div>
-			</div>
 		</div>
 	</div>
 	<!-- JS da Página -->
@@ -94,7 +80,7 @@
 	<script type="text/javascript" src="../js/mask-number-min.js"></script>
 	<script>
 		$('.money').mask('#.##0,00', { reverse: true });
-		$('.year').mask('####', { reverse: false });
+		$('.year').mask('0000', { reverse: false });
 		
 	</script>
 	
