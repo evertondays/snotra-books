@@ -48,8 +48,8 @@
 				<option value="Drama">Drama</option>
 				<option value="Épico">Épico</option>
 				<option value="Fantasia">Fantasia</option>
+				<option value="Ficção">Ficção</option>
 				<option value="Ficção Ciêntifica">Ficção Ciêntifica</option>
-				<option value="Ficção Histórica">Ficção Histórica</option>
 				<option value="Hístoria">Hístoria</option>
 				<option value="Horror">Horror</option>
 				<option value="Infantojuvenil">Infantojuvenil</option>
@@ -58,7 +58,10 @@
 			</select>
 
 			<label for="input-value">Valor</label>
-			<input id="input-value" class="money" type="text">
+			<input id="input-value" class="money" type="text" require>
+
+			<label for="input-value">Inserir imagem própria</label>
+			<input id="input-img-url" type="file" style="border: none;">
 
 			<button class="register-button" type="submit">Confirmar cadastro!</button>
 		</form>
@@ -67,10 +70,13 @@
 	<div class="container">
 		<input class="input-search" type="text" id="search-book-api" />
 		<div class="books">
+		<div class="book" id="book-1">
+			<div class="image-div"><img class="img-livro" src="http://books.google.com/books/content?id=F4zKDEin4bUC&amp;printsec=frontcover&amp;img=1&amp;zoom=1&amp;edge=curl&amp;source=gbs_api"></div><div class="infos"><h1>Vamos Construir Uma Casa?</h1><h2>Rubem Alves</h2><div class="description">Conchas, teias de aranha, iglus, ninhos, colméias, prédios, formigueiros - há uma infinidade de tipos de lugar em que os seres vivos moram. Ao observar essas 'casas', a gente descobre um monte de coisas sobre cada uma e sobre os bichos que vivem nelas. Descobre também que as ciências fazem parte do mundo, desse imenso laboratório a céu aberto em que vivemos. Imagine agora que vamos construir uma casa. Como diz Rubem Alves, 'tudo o que a gente faz começa na imaginação. Imaginar é ver na cabeça uma coisa que ainda não existe na realidade'. Então, como será nossa casa? As telhas serão vermelhas? E as paredes, de que cor serão pintadas? A casa terá uma chaminé? Terá um jardim na frente? Para que lado vai estar virada? Assim, brincando, este livro vai aguçar a sensibilidade e a percepção das crianças. Junto com Rubem Alves, o pequeno e o grande leitor vão explorar as casas de bichos e de diferentes povos, numa viagem inesquecível.</div><div class="date">sem data</div><div class="button-div"><button class="pre-register" onclick="return showRegisterDivByAPI('book-1')">Cadastrar</button></div></div></div>
 		</div>
 	</div>
+
 	<!-- JS da Página -->
-	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 	<script type="text/javascript" src="../js/api-key.js"></script>
 	<script type="text/javascript" src="../js/search-api.js"></script>
 	<script type="text/javascript" src="../js/register-book.js"></script>
