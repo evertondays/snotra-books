@@ -10,10 +10,10 @@
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap" rel="stylesheet">
 
 	<!-- CSS -->
-	<link rel="stylesheet" href="../css/global.css">
-	<link rel="stylesheet" href="../css/register-book.css">
+	<link rel="stylesheet" href="../../../css/global.css">
+	<link rel="stylesheet" href="../../../css/register-book.css">
 
-	<title>Hello, world!</title>
+	<title>Cadastro de Livros - </title>
 </head>
 <body>
 	<div class="register-wrapper">
@@ -21,21 +21,21 @@
 			<i class="fas fa-times"></i>
 		</div>
 
-		<form class="register" action="" autocomplete="off">
+		<form class="register" method="post" action="exec.php" enctype="multipart/form-data" autocomplete="off">
 			<label id="first-label" for="input-title">Título</label>
-			<input id="input-title" type="text" require>
+			<input id="input-title" name="title" type="text" required>
 
 			<label for="input-authors">Autores</label>
-			<input id="input-authors" type="text" require>
+			<input id="input-authors" name="authors" type="text" required>
 
 			<label for="input-description">Descrição</label>
-			<textarea id="input-description" rows="5" type="text" require></textarea>
+			<textarea id="input-description" name="description" rows="5" type="text" required></textarea>
 
 			<label for="input-date">Ano de lançamento</label>
-			<input id="input-date" class="year" type="text" require>
+			<input id="input-date" name="date" class="year" type="text" required>
 
 			<label for="input-category">Categoria</label>
-			<select id="input-category">
+			<select id="input-category" name="category" required>
 				<option selected disabled>Selecione uma opção</option>
 				<option value="Ação">Ação</option>
 				<option value="Antologias">Antologias</option>
@@ -58,41 +58,67 @@
 			</select>
 
 			<label for="input-value">Valor</label>
-			<input id="input-value" class="money" type="text" require>
+			<input id="input-value" name="value" class="money" type="text" required>
 
 			<label for="input-value">Inserir imagem própria</label>
-			<input id="input-img-url" type="file" style="border: none;">
+			<input id="input-file" name="img-file" type="file" accept="image/*" style="border: none;">
+			<input type="hidden" id="input-img-url" name="img-url">
 
 			<button class="register-button" type="submit">Confirmar cadastro!</button>
 		</form>
 	</div>
 
 	<div class="container">
-		<input class="input-search" type="text" id="search-book-api" />
-		<div class="books">
-		<div class="book" id="book-1">
-			<div class="image-div"><img class="img-livro" src="http://books.google.com/books/content?id=F4zKDEin4bUC&amp;printsec=frontcover&amp;img=1&amp;zoom=1&amp;edge=curl&amp;source=gbs_api"></div><div class="infos"><h1>Vamos Construir Uma Casa?</h1><h2>Rubem Alves</h2><div class="description">Conchas, teias de aranha, iglus, ninhos, colméias, prédios, formigueiros - há uma infinidade de tipos de lugar em que os seres vivos moram. Ao observar essas 'casas', a gente descobre um monte de coisas sobre cada uma e sobre os bichos que vivem nelas. Descobre também que as ciências fazem parte do mundo, desse imenso laboratório a céu aberto em que vivemos. Imagine agora que vamos construir uma casa. Como diz Rubem Alves, 'tudo o que a gente faz começa na imaginação. Imaginar é ver na cabeça uma coisa que ainda não existe na realidade'. Então, como será nossa casa? As telhas serão vermelhas? E as paredes, de que cor serão pintadas? A casa terá uma chaminé? Terá um jardim na frente? Para que lado vai estar virada? Assim, brincando, este livro vai aguçar a sensibilidade e a percepção das crianças. Junto com Rubem Alves, o pequeno e o grande leitor vão explorar as casas de bichos e de diferentes povos, numa viagem inesquecível.</div><div class="date">sem data</div><div class="button-div"><button class="pre-register" onclick="return showRegisterDivByAPI('book-1')">Cadastrar</button></div></div></div>
+		<div class="search-box" method="get">
+			<input class="input-search" type="text" id="search-book-api" placeholder="Pesquise aqui" autocomplete="off" />
 		</div>
+		<small>ou</small>
+		<button id="manual-register"  onclick="return showRegisterDivByUser()">Cadastrar manualmente</button>
+		
+		<div class="books"></div>
 	</div>
 
 	<!-- JS da Página -->
 	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-	<script type="text/javascript" src="../js/api-key.js"></script>
-	<script type="text/javascript" src="../js/search-api.js"></script>
-	<script type="text/javascript" src="../js/register-book.js"></script>
+	<script type="text/javascript" src="../../../js/api-key.js"></script>
+	<script type="text/javascript" src="../../../js/search-api.js"></script>
+	<script type="text/javascript" src="../../../js/register-book.js"></script>
 
 	<!-- Mascara de Valor -->
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-	<script type="text/javascript" src="../js/mask-number-min.js"></script>
+	<script type="text/javascript" src="../../../js/mask-number-min.js"></script>
 	<script>
 		$('.money').mask('#.##0,00', { reverse: true });
 		$('.year').mask('0000', { reverse: false });
-		
 	</script>
 	
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/js/all.min.js"
 		integrity="sha512-M+hXwltZ3+0nFQJiVke7pqXY7VdtWW2jVG31zrml+eteTP7im25FdwtLhIBTWkaHRQyPrhO2uy8glLMHZzhFog=="
 		crossorigin="anonymous">
+	</script>
+
+	<!-- Aviso de Erro -->
+	<script type="text/javascript">
+		let pageUrl = window.location.href;
+		let split = pageUrl.split('=');
+		let error = split[1];
+
+		if (error == 'NoUrlImage'){
+			alert('Não existe nenhuma imagem');
+
+		} else if (error == 'ImagemNotAllowed') {
+			alert('Imagem não permitida');
+
+		} else if (error == 'NoCategory') {
+			alert('É preciso escolher uma categoria para cadastrar um livro');
+
+		} else if (error == 'none'){
+			alert('Cadastro realizado com sucesso');
+			
+		} else {
+			console.log('Sem erros');
+		}
+
 	</script>
 </body>
 </html>
