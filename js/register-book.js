@@ -36,6 +36,7 @@ function showRegisterDivByUser(){
 	document.querySelector('#input-authors').value = authors;
 	document.querySelector('#input-description').value = description;
 	document.querySelector('#input-date').value = date;
+	document.querySelector('#input-img-url').value = 'undefined';
 
 	registerWrapper.style.display = 'grid';
 }
