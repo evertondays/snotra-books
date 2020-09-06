@@ -1,3 +1,11 @@
+<?php
+	require('server/connect.php');
+
+	$data = mysql_query('SELECT id, titulo, valor, imagem, autores FROM livros', $con) or die(mysql_error());
+	$row = mysql_fetch_assoc($data);
+	$total = mysql_num_rows($data);
+?>
+
 <!doctype html>
 <html lang="pt-br">
 <head>
@@ -48,8 +56,8 @@
 				<li>Drama</li>
 				<li>Épico</li>
 				<li>Fantasia</li>
+				<li>Ficção</li>
 				<li>Ficção Ciêntifica</li>
-				<li>Ficção Histórica</li>
 				<li>Horror</li>
 				<li>Infantojuvenil</li>
 				<li>Infantil</li>
@@ -61,16 +69,24 @@
 
 	<div class="container">
 		<div class="books">
-			<div class="book">
-				<div class="background" style="background-image: url('images/livro-2.jpg')"></div>
-				<center><img src="images/livro-2.jpg" alt="Capa do livro" class="img-book"></center>
-				<div class="infos">
-					<h1>O Guia Definitivo do Mochileiro das Galáxias</h1>
-					<h2>Douglas Adams</h2>
-					<div class="value">R$ 42,00</div>
-					<button class="buy-book">Comprar</button>
+		<?php 
+			if($total > 0) {
+				do {
+			?>
+				<div class="book">
+					<div class="background" style="background-image: url('<?=$row['imagem']?>')"></div>
+					<center><img src="<?=$row['imagem']?>" alt="Capa do livro" class="img-book"></center>
+					<div class="infos">
+						<h1><?=$row['titulo']?></h1>
+						<h2><?=$row['autores']?></h2>
+						<div class="value">R$ <?=$row['valor']?></div>
+						<button class="buy-book">Comprar</button>
+					</div>
 				</div>
-			</div>
+		<?php
+				}while($row = mysql_fetch_assoc($data));
+			}
+		?>
 		</div>
 	</div>
 
