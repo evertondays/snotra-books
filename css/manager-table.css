@@ -1,0 +1,87 @@
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+table {
+  width: 100%;
+  font-size: 1.2rem;
+  border-collapse: collapse !important;
+  border-spacing: 0px;
+}
+
+td, th{
+  border: 1px solid var(--primary);
+  padding: 1rem;
+}
+
+.table-center{
+  text-align: center;
+}
+
+tr:nth-child(even) {
+  background-color: #c9c9c9;
+}
+
+.book-table thead{
+  font-weight: bold;
+  font-size: 1.4rem;
+  background-color: #c9c9c9;
+}
+
+.book-table img{
+  height: 96px;
+}
+
+.button {
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  transition: background-color 0.4s;
+
+  padding: .5rem 1rem;
+  font-size: 14px;
+}
+
+.edit{
+  background-color: var(--yellow);
+}
+
+.delete{
+  background-color: var(--red);
+}
+
+.edit:hover{
+  background-color: var(--dark-yellow);
+}
+
+.delete:hover{
+  background-color: var(--dark-red);
+}
+
+/* removendo linhas da tabela */
+.table-value{
+  display: none;
+}
+
+@media (max-width: 376px) {
+  .table-img{
+    display: none;
+  }
+}
+
+@media (min-width: 700px) {
+  .button {
+    padding: 1rem 1.5rem;
+    font-size: 16px;
+  }
+  .table-value{
+    display: table-cell;
+  }
+}
