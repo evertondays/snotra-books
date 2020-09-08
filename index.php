@@ -72,8 +72,8 @@
 		<?php 
 			if($total > 0) {
 				do {
-			?>
-				<div class="book">
+		?>
+				<div id="book-<?=$row['id']?>" class="book">
 					<div class="background" style="background-image: url('<?=$row['imagem']?>')"></div>
 					<center><img src="<?=$row['imagem']?>" alt="Capa do livro" class="img-book"></center>
 					<div class="infos">
@@ -95,5 +95,7 @@
 		integrity="sha512-M+hXwltZ3+0nFQJiVke7pqXY7VdtWW2jVG31zrml+eteTP7im25FdwtLhIBTWkaHRQyPrhO2uy8glLMHZzhFog=="
 		crossorigin="anonymous">
 	</script>
+	<script src="js/referencing-image.js"></script>
+	<script>referencingImageShowcase('images/book/')</script>
 </body>
 </html>
