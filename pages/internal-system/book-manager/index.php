@@ -46,7 +46,14 @@
 							<th><?=$row['titulo']?></th>
 							<th class="table-value">R$ <?=$row['valor']?></th>
 							<th><button class="edit button"><i class="fas fa-cog"></i></button></th>
-							<th><button class="delete button"><i class="fas fa-trash-alt"></i></button></th>
+
+							<th>
+								<a href="delete-exec.php?id=<?=$row['id']?>" 
+									onclick="return confirmExclusion('<?=$row['titulo']?>')">
+
+									<button class="delete button"><i class="fas fa-trash-alt"></i></button>
+								</a>
+							</th>
 						</tr>
 				<?php
 					}while($row = mysql_fetch_assoc($data));
@@ -60,6 +67,7 @@
 		crossorigin="anonymous">
 	</script>
 	<script src="../../../js/referencing-image.js"></script>
+	<script src="../../../js/confim-exclusion.js"></script>
 	<script>referencingImage('../../../images/book/')</script>
 </body>
 </html>
