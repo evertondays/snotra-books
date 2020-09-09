@@ -31,7 +31,7 @@
 				Logo vai aqui
 			</div>
 			<div class="user-info">
-				Igor Câmara | (4) produtos
+				Everton Dias | (4) produtos
 			</div>
 		</header>
 		<div class="search">
@@ -66,29 +66,39 @@
 			</ul>
 		</div>
 	</div>
+		<?php if($total > 0) { ?>
+				<div class="container">
+					<div class="books">
 
-	<div class="container">
-		<div class="books">
-		<?php 
-			if($total > 0) {
-				do {
-		?>
-				<div id="book-<?=$row['id']?>" class="book">
-					<div class="background" style="background-image: url('<?=$row['imagem']?>')"></div>
-					<center><img src="<?=$row['imagem']?>" alt="Capa do livro" class="img-book"></center>
-					<div class="infos">
-						<h1><?=$row['titulo']?></h1>
-						<h2><?=$row['autores']?></h2>
-						<div class="value">R$ <?=$row['valor']?></div>
-						<button class="buy-book">Comprar</button>
+				<?php do { ?>
+
+					<div id="book-<?=$row['id']?>" class="book">
+						<div class="background" style="background-image: url('<?=$row['imagem']?>')"></div>
+						<center><img src="<?=$row['imagem']?>" alt="Capa do livro" class="img-book"></center>
+						<div class="infos">
+							<h1><?=$row['titulo']?></h1>
+							<h2><?=$row['autores']?></h2>
+							<div class="value">R$ <?=$row['valor']?></div>
+							<button class="buy-book">Comprar</button>
+						</div>
+					</div>
+
+				<?php } while($row = mysql_fetch_assoc($data)); ?>
+
 					</div>
 				</div>
-		<?php
-				}while($row = mysql_fetch_assoc($data));
-			}
-		?>
-		</div>
-	</div>
+		<?php } else { ?>
+
+			<div class="no-results">
+				<div class="no-results-wrapper">
+					<h1><i class="fas fa-exclamation-triangle"></i></h1>
+					<h1>Ops! Acho que acabaram os livros :(</h1>
+					<h2>Mas não se preocupe, volte mais tarde ou prossiga para a home</h2>
+					<a href="index.php">Voltar para a home</a>
+				</div>
+			</div>
+
+		<?php } ?>
 
 	<script src="js/menu.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/js/all.min.js"
