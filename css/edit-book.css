@@ -1,0 +1,46 @@
+.container{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+  width: 100vw;
+  height: 100vh;
+}
+
+form{
+  width: 100%;
+}
+
+.input-group{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.input-group-img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0 1.5rem;
+}
+
+.register-button{
+  width: 100%;
+  background: var(--primary);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  color: var(--white);
+  cursor: pointer;
+  transition: background 0.4s;
+}
+
+.register-button:hover{
+  background: var(--primary-dark);
+}
+
+@media (max-width: 500px) {
+  .input-group-img{
+      flex-direction: column;
+  }
+}
