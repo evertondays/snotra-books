@@ -45,7 +45,7 @@
 							<th class="table-img"><img class="book-img" src="<?=$row['imagem']?>"></th>
 							<th><?=$row['titulo']?></th>
 							<th class="table-value">R$ <?=$row['valor']?></th>
-							<th><button class="edit button"><i class="fas fa-cog"></i></button></th>
+							<th><button class="edit button" onclick="window.location.href='../edit-book/index.php?id=<?=$row['id']?>'"><i class="fas fa-cog"></i></button></th>
 
 							<th>
 								<a href="delete-exec.php?id=<?=$row['id']?>" 
