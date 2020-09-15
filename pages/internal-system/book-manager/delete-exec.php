@@ -20,7 +20,7 @@
 		unlink('../../../images/book/'.$row['imagem']);
 	}
 
-	// Deletando nave do bd 
+	// Deletando livro do bd 
 	mysql_query('DELETE FROM livros WHERE id = ' . $id, $con);
 
 
