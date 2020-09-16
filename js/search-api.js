@@ -7,7 +7,7 @@ const books = document.querySelector('.books');
 inputSearch.addEventListener('change', (event) => {
 	let busca = encodeURIComponent(event.target.value);
 	const query = url + busca + key;
-
+	console.log(query)
 	books.innerHTML = "";
 
 	axios.get(query)
@@ -15,6 +15,7 @@ inputSearch.addEventListener('change', (event) => {
 			const items = response.data.items;
 			
 			let index = 0;
+			
 
 			items.map((item) =>{
 				generateDiv(item, index);
@@ -36,7 +37,7 @@ function generateDiv(item, index){
 	divImage.classList.add('image-div');
 	let img = document.createElement('img');
 	img.classList.add('img-livro');
-	img.src = item.volumeInfo.imageLinks.thumbnail;
+	img.src = item.volumeInfo?.imageLinks?.thumbnail;
 	divImage.appendChild(img);
 	book.appendChild(divImage);
 
