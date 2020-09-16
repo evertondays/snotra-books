@@ -33,6 +33,7 @@ form{
   color: var(--white);
   cursor: pointer;
   transition: background 0.4s;
+  margin-bottom: 1rem;
 }
 
 .register-button:hover{
