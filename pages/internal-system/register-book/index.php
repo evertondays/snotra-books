@@ -12,10 +12,14 @@
 	<!-- CSS -->
 	<link rel="stylesheet" href="../../../css/global.css">
 	<link rel="stylesheet" href="../../../css/register-book.css">
+	<link rel="stylesheet" href="../../../css/menu-system.css">
 
-	<title>Cadastro de Livros - </title>
+	<title>Cadastro de Livros - SnotraBooks</title>
 </head>
 <body>
+
+	<?php include('../../../models/menu-system.php')?>
+
 	<div class="register-wrapper">
 		<div class="exit-button">
 			<i class="fas fa-times"></i>

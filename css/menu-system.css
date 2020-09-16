@@ -1,0 +1,47 @@
+.menu{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  background-color: var(--primary);
+  height: 5rem;
+}
+
+.left{
+  display: flex;
+  width: 50%;
+  margin-left: 10px;
+}
+
+.left a{
+  font-size: 2rem !important;
+}
+
+.right{
+  display: flex;
+  width: 50%;
+  flex-direction: row-reverse;
+  margin-right: 5px;
+}
+
+.options{
+  display: flex;
+}
+
+.option{
+  margin: 0.7rem;
+  color: var(--white);
+  font-size: 1.2rem;
+}
+
+@media screen and (max-width: 350px) {
+  .option{
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .option{
+    font-size: 1.5rem;
+  }
+}

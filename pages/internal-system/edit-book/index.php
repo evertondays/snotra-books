@@ -27,10 +27,14 @@
 	<link rel="stylesheet" href="../../../css/global.css">
 	<link rel="stylesheet" href="../../../css/form.css">
 	<link rel="stylesheet" href="../../../css/edit-book.css">
+	<link rel="stylesheet" href="../../../css/menu-system.css">
 
-	<title>Hello, world!</title>
+	<title>Edição de Livro - SnotraBooks</title>
 </head>
 <body>
+
+	<?php include('../../../models/menu-system.php')?>
+
 	<div class="container">
 		<form method="post" action="exec.php" enctype="multipart/form-data" autocomplete="off">
 		<input type="hidden" name="id" value="<?=$row['id']?>">
@@ -90,7 +94,7 @@
 				<input type="hidden" id="input-img-url" name="img-url" value="<?=$row['imagem']?>">
 			</div>
 
-			<button class="register-button" type="submit">Confirmar cadastro!</button>
+			<button class="register-button" type="submit">Confirmar edição</button>
 		</form>
 	</div>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/js/all.min.js"

@@ -19,10 +19,14 @@
 	<!-- CSS -->
 	<link rel="stylesheet" href="../../../css/global.css">
 	<link rel="stylesheet" href="../../../css/manager-table.css">
+	<link rel="stylesheet" href="../../../css/menu-system.css">
 
-	<title>Hello, world!</title>
+	<title>Controle de Livros - SnotraBooks</title>
 </head>
 <body>
+
+	<?php include('../../../models/menu-system.php')?>
+
 	<div class="container">
 		<table class="book-table">
 			<thead>
