@@ -22,13 +22,14 @@
 	<link rel="stylesheet" href="css/global.css">
 	<link rel="stylesheet" href="css/book-showcase.css">
 
-	<title>Hello, world!</title>
+	<title>Home - SnotraBooks</title>
+	<link size="25x25px" rel='shortcut icon' href="images/favicon.ico" />
 </head>
 <body>
 	<div id="menu">
 		<header>
 			<div class="logo">
-				Logo vai aqui
+				SnotraBooks
 			</div>
 			<div class="user-info">
 				Everton Dias | (4) produtos
