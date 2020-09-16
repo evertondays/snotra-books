@@ -3,10 +3,17 @@
   --primary: #3689ff;
   --primary-dark: #2867BF;
   --gray: #a7a7a7;
+  --dark-gray: #666666;
   --white: #f8f9fa;
   --white-dark: #E6E6E6;
   --text: #313131;
+
   --green: #28a745;
+  --dark-green: #228C3B;
+  --yellow: #ffdd57;
+  --dark-yellow: #E6C74E;
+  --red: #f14668;
+  --dark-red: #C22F3D;
 
   font-size: 60%;
 }
