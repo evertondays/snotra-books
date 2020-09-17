@@ -1,3 +1,5 @@
+<?php require('../login-verification.php')?>
+
 <html>
 <head>
 	<meta charset="utf-8">

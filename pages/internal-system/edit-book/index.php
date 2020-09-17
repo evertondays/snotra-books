@@ -1,4 +1,5 @@
 <?php
+	require('../login-verification.php');
 	require('../../../server/connect.php');
 
 	if(!isset($_GET["id"])) {

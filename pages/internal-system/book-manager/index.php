@@ -1,5 +1,6 @@
 <?php
 	require('../../../server/connect.php');
+	require('../login-verification.php');
 
 	$data = mysql_query('SELECT id, titulo, imagem, valor FROM livros', $con) or die(mysql_error());
 	$row = mysql_fetch_assoc($data);
