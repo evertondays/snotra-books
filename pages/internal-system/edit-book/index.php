@@ -31,6 +31,7 @@
 	<link rel="stylesheet" href="../../../css/menu-system.css">
 
 	<title>Edição de Livro - SnotraBooks</title>
+	<link size="25x25px" rel='shortcut icon' href="../../../images/favicon-gear.ico" />
 </head>
 <body>
 

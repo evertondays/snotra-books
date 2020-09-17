@@ -17,6 +17,7 @@
 	<link rel="stylesheet" href="../../css/form.css">
 
 	<title>Login Sistema Interno - SnotraBooks</title>
+	<link size="25x25px" rel='shortcut icon' href="../../images/favicon-gear.ico" />
 </head>
 <body style="background-image: url('../../images/wallpaper.jpg') !important;">
 	<div class="container">

@@ -17,6 +17,7 @@
 	<link rel="stylesheet" href="../../../css/menu-system.css">
 
 	<title>Cadastro de Livros - SnotraBooks</title>
+	<link size="25x25px" rel='shortcut icon' href="../../../images/favicon-gear.ico" />
 </head>
 <body>
 
