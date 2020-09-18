@@ -73,8 +73,8 @@
 	";
 	mysql_query($query, $con);
 
-	/*header('Location: ../book-manager/');
-	exit();*/
+	header('Location: ../book-manager/');
+	exit();
 
 ?>
 </html>
