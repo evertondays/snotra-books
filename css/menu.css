@@ -77,6 +77,31 @@
   border-radius: 90rem;
 }
 
+.user-info button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid var(--white);
+    border-radius: 0.4rem;
+    background: var(--primary);
+    color: var(--white);
+  
+    font-family: 'Archivo', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.03rem;
+  
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.user-info button:hover{
+  border-color: var(--gray);
+  color: var(--gray);
+}
+  
+
 @media screen and (min-width: 800px) {
   #menu{
     background-color: var(--primary);

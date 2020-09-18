@@ -57,6 +57,26 @@ input{
   font-weight: bold;
 }
 
+.btn-register{
+  padding: 1.5rem;
+  color: var(--white);
+  background-color: var(--green);
+  border: 2px solid var(--green);
+  border-radius: 1rem;
+  margin-top: 2rem;
+  cursor: pointer;
+
+  transition: 0.2s;
+  width: 100%;
+}
+
+.btn-register:hover{
+  background-color: var(--white);
+  border: 2px solid var(--primary-dark);
+  color: var(--primary-dark);
+  font-weight: bold;
+}
+
 .error-login{
   display: flex;
   justify-content: center;
