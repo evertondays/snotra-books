@@ -20,9 +20,6 @@
 	<link size="25x25px" rel='shortcut icon' href="../../../images/favicon-gear.ico" />
 </head>
 <body>
-
-	<?php include('../../../models/menu-system.php')?>
-
 	<div class="register-wrapper">
 		<div class="exit-button">
 			<i class="fas fa-times"></i>
@@ -76,6 +73,23 @@
 	</div>
 
 	<div class="container">
+	
+	<div class="menu" style="width: calc(100% + 4rem);">
+		<div class="left">
+			<a class="option" href="../../../index.php">SnotraBooks</a>
+		</div>
+		<div class="right">
+			<div class="options">
+				<a class="option" href="../register-book">Cadastro</a>
+				<a class="option" href="../book-manager">Controle</a>
+				<a class="option" style="color: #F03A5F; margin-right: 2rem;" href="../logout.php">
+					<strong>Sair</strong>
+					<i class="fas fa-sign-out-alt" style="margin-left: 5px"></i>
+				</a>
+			</div>
+		</div>
+	</div>
+
 		<div class="search-box" method="get">
 			<input class="input-search" type="text" id="search-book-api" placeholder="Pesquise aqui" autocomplete="off" />
 		</div>
