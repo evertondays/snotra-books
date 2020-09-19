@@ -56,7 +56,6 @@
 				if(!isset($_SESSION['user_cli'])) {
 					?> <button onclick="window.location.href='login.php'">Entrar</button> <?php
 				} else {
-
 					$client_name = $_SESSION['user_name_cli'];
 
 					?> <a href="shopping-cart.php"><?=$client_name?> | Carrinho ()</a><?php
@@ -92,7 +91,7 @@
 				</div>
 			</div>
 			<br><br>
-			<center><button class="buy-book" style="padding: 2.5rem; width: 80%;"><i style="margin-right: 1rem;" class="fas fa-shopping-cart fa-lg"></i>Adicionar ao carrinho</button></center>
+			<center><button onclick="window.location.href='buy-item.php?idItem=<?=$row['id']?>'" class="buy-book" style="padding: 2.5rem; width: 80%;"><i style="margin-right: 1rem;" class="fas fa-shopping-cart fa-lg"></i>Adicionar ao carrinho</button></center>
 			<br>
 			<div class="description">
 				<h2>Sinopse</h2>
