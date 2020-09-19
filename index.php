@@ -32,12 +32,27 @@
 				SnotraBooks
 			</div>
 			<div class="user-info">
-				Everton Dias | (4) produtos
+				<?php
+				// Lidando com o cliente cadastrado
+				session_start();
+				if(!isset($_SESSION['user_cli'])) {
+					?> <button onclick="window.location.href='pages/login.php'">Entrar</button> <?php
+				} else {
+
+					$client_name = $_SESSION['user_name_cli'];
+
+					?> <a href="pages/shopping-cart.php"><?=$client_name?> | Carrinho ()</a><?php
+				}
+				?>
+
 			</div>
 		</header>
 		<div class="search">
-			<input id="search-book" type="text" placeholder="Pesquise aqui por um livro">
-			<button class="search-button">
+			<form style="width: 100%;">
+				<input id="search-book" type="text" placeholder="Pesquise aqui por um livro">
+			</form>
+
+			<button class="search-button" type="submit">
 				Buscar
 			</button>
 		</div>
@@ -80,7 +95,7 @@
 							<h1><?=$row['titulo']?></h1>
 							<h2><?=$row['autores']?></h2>
 							<div class="value">R$ <?=$row['valor']?></div>
-							<button class="buy-book">Comprar</button>
+							<button class="buy-book" onclick="window.location.href='pages/product.php?id=<?=$row['id']?>'">Comprar</button>
 						</div>
 					</div>
 
@@ -107,6 +122,7 @@
 		crossorigin="anonymous">
 	</script>
 	<script src="js/referencing-image.js"></script>
+	<script src="js/search-form.js"></script>
 	<script>referencingImageShowcase('images/book/')</script>
 </body>
 </html>

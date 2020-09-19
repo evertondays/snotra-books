@@ -50,7 +50,19 @@
 				<a style="color: var(--white);" href="../index.php">SnotraBooks</a>
 			</div>
 			<div class="user-info">
-				Everton Dias | (4) produtos
+				<?php
+				// Lidando com o cliente cadastrado
+				session_start();
+				if(!isset($_SESSION['user_cli'])) {
+					?> <button onclick="window.location.href='login.php'">Entrar</button> <?php
+				} else {
+
+					$client_name = $_SESSION['user_name_cli'];
+
+					?> <a href="shopping-cart.php"><?=$client_name?> | Carrinho ()</a><?php
+				}
+				?>
+
 			</div>
 		</header>
 	</div>

@@ -77,6 +77,14 @@
   border-radius: 90rem;
 }
 
+.user-info a{
+  color: var(--white);
+}
+
+.user-info a:hover{
+  text-decoration: underline;
+}
+
 .user-info button{
     display: flex;
     justify-content: center;
