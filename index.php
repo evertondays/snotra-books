@@ -1,7 +1,20 @@
 <?php
 	require('server/connect.php');
 
-	$data = mysql_query('SELECT id, titulo, valor, imagem, autores FROM livros', $con) or die(mysql_error());
+
+	if(isset($_GET['search'])){
+		$search = urldecode($_GET['search']);
+		$query = "SELECT id, titulo, valor, imagem, autores FROM livros WHERE titulo LIKE '%$search%'";
+	}
+	else if (isset($_GET['category']))
+	{
+		$category = urldecode($_GET['category']);
+		$query = "SELECT id, titulo, valor, imagem, autores FROM livros WHERE categoria = '$category'";
+	} else {
+		$query = 'SELECT id, titulo, valor, imagem, autores FROM livros';
+	}
+
+	$data = mysql_query($query, $con) or die(mysql_error());
 	$row = mysql_fetch_assoc($data);
 	$total = mysql_num_rows($data);
 ?>
@@ -29,7 +42,7 @@
 	<div id="menu">
 		<header>
 			<div class="logo">
-				SnotraBooks
+				<a style="color: var(--white);" href="index.php">SnotraBooks</a>
 			</div>
 			<div class="user-info">
 				<?php
@@ -47,38 +60,33 @@
 
 			</div>
 		</header>
-		<div class="search">
-			<form style="width: 100%;">
-				<input id="search-book" type="text" placeholder="Pesquise aqui por um livro">
-			</form>
-
-			<button class="search-button" type="submit">
-				Buscar
-			</button>
-		</div>
+		<form class="search" action="pages/search.php" method="get" style="width: 100%;">
+			<input name="search-input"id="search-book" type="text" placeholder="Pesquise aqui por um livro">
+			<button class="search-button" type="submit">Buscar</button>
+		</form>
 		<div class="categories-button">
 			Ver categorias <i class="fas fa-chevron-down"></i>
 		</div>
 		<div class="categories invisible">
 			<ul>
-				<li>Ação</li>
-				<li>Antologias</li>
-				<li>Autoajuda</li>
-				<li>Aventura</li>
-				<li>Biografia</li>
-				<li>Ciência</li>
-				<li>Contos</li>
-				<li>Crônica</li>
-				<li>Drama</li>
-				<li>Épico</li>
-				<li>Fantasia</li>
-				<li>Ficção</li>
-				<li>Ficção Ciêntifica</li>
-				<li>Horror</li>
-				<li>Infantojuvenil</li>
-				<li>Infantil</li>
-				<li>Romance</li>
-				<li>Hístoria</li>
+				<li onclick="window.location.href='index.php?category=<?=urlencode('Ação')?>'">Ação</li>
+				<li onclick="window.location.href='index.php?category=<?=urlencode('Antologias')?>'">Antologias</li>
+				<li onclick="window.location.href='index.php?category=<?=urlencode('Autoajuda')?>'">Autoajuda</li>
+				<li onclick="window.location.href='index.php?category=<?=urlencode('Aventura')?>'">Aventura</li>
+				<li onclick="window.location.href='index.php?category=<?=urlencode('Biografia')?>'">Biografia</li>
+				<li onclick="window.location.href='index.php?category=<?=urlencode('Ciência')?>'">Ciência</li>
+				<li onclick="window.location.href='index.php?category=<?=urlencode('Contos')?>'">Contos</li>
+				<li onclick="window.location.href='index.php?category=<?=urlencode('Crônica')?>'">Crônica</li>
+				<li onclick="window.location.href='index.php?category=<?=urlencode('Ficção')?>'">Drama</li>
+				<li onclick="window.location.href='index.php?category=<?=urlencode('Ficção')?>'">Épico</li>
+				<li onclick="window.location.href='index.php?category=<?=urlencode('Fantasia')?>'">Fantasia</li>
+				<li onclick="window.location.href='index.php?category=<?=urlencode('Ficção')?>'">Ficção</li>
+				<li onclick="window.location.href='index.php?category=<?=urlencode('Ficção Ciêntifica')?>'">Ficção Ciêntifica</li>
+				<li onclick="window.location.href='index.php?category=<?=urlencode('Horror')?>'">Horror</li>
+				<li onclick="window.location.href='index.php?category=<?=urlencode('Infantojuvenil')?>'">Infantojuvenil</li>
+				<li onclick="window.location.href='index.php?category=<?=urlencode('Infantil')?>'">Infantil</li>
+				<li onclick="window.location.href='index.php?category=<?=urlencode('Romance')?>'">Romance</li>
+				<li onclick="window.location.href='index.php?category=<?=urlencode('Hístoria')?>'">Hístoria</li>
 			</ul>
 		</div>
 	</div>
