@@ -117,7 +117,7 @@
 						<h1><?=$row['titulo']?></h1>
 						<h2><?=$row['autores']?></h2>
 						<div class="value">R$ <?=$row['valor']?></div>
-						<button class="buy-book">Comprar</button>
+						<button onclick="window.location.href='product.php?id=<?=$row['id']?>'" class="buy-book">Comprar</button>
 					</div>
 				</div>
 			<?php } while($row = mysql_fetch_assoc($data)); ?>
