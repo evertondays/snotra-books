@@ -22,8 +22,9 @@
 	<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&family=Work+Sans:wght@600&display=swap" rel="stylesheet">
 
 	<!-- CSS -->
-	<link rel="stylesheet" href="../css/menu.css">
 	<link rel="stylesheet" href="../css/global.css">
+	<link rel="stylesheet" href="../css/default.css">
+	<link rel="stylesheet" href="../css/menu.css">
 	<link rel="stylesheet" href="../css/book-showcase.css">
 	<link rel="stylesheet" href="../css/product.css">
 

@@ -14,7 +14,7 @@
 		$query = 'SELECT id, titulo, valor, imagem, autores FROM livros';
 	}
 
-	$data = mysql_query($query, $con) or die(mysql_error());
+	$data = mysql_query($query . " LIMIT 12", $con) or die(mysql_error());
 	$row = mysql_fetch_assoc($data);
 	$total = mysql_num_rows($data);
 ?>
@@ -31,8 +31,9 @@
 	<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&family=Work+Sans:wght@600&display=swap" rel="stylesheet">
 
 	<!-- CSS -->
-	<link rel="stylesheet" href="css/menu.css">
 	<link rel="stylesheet" href="css/global.css">
+	<link rel="stylesheet" href="css/default.css">
+	<link rel="stylesheet" href="css/menu.css">
 	<link rel="stylesheet" href="css/book-showcase.css">
 
 	<title>Home - SnotraBooks</title>
@@ -60,7 +61,7 @@
 
 			</div>
 		</header>
-		<form class="search" action="pages/search.php" method="get" style="width: 100%;">
+		<form class="search" action="pages/search.php" method="get" style="width: 100%;" autocomplete="off">
 			<input name="search-input"id="search-book" type="text" placeholder="Pesquise aqui por um livro">
 			<button class="search-button" type="submit">Buscar</button>
 		</form>
