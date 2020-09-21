@@ -76,6 +76,19 @@ td, th{
   display: none;
 }
 
+
+/* Valor total da compra */
+.result-value{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 2rem;
+
+  font-size: 2rem;
+  color: #000;
+}
+
 @media (min-width: 700px) {
   .table-index{
     display: table-cell;

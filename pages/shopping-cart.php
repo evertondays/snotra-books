@@ -58,7 +58,7 @@
 					<th>Titulo</th>
 					<th class="table-authors">Autores</th>
 					<th>Valor</th>
-					<th class="table-button">DELETAR</th>
+					<th class="table-button">REMOVER</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -77,7 +77,7 @@
 					<td class="table-img"><img class="book-img" src="<?=$book_row['imagem']?>" alt="Capa do livro"></td>
 					<td class="title-table"><?=$book_row['titulo']?></td>
 					<td class="table-authors"><?=$book_row['autores']?></td>
-					<td>R$ <?=$book_row['valor']?></td>
+					<td class="value">R$ <?=$book_row['valor']?></td>
 					<td class="table-button">
 						<a href="#" onclick="return confirmExclusion('<?=$row['titulo']?>')">
 							<button class="delete-button"><i class="fas fa-trash-alt fa-lg"></i></button>
@@ -94,6 +94,7 @@
 			?>
 			</tbody>
 		</table>
+		<div class="result-value"></div>
 	</div>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/js/all.min.js"
@@ -101,6 +102,7 @@
 		crossorigin="anonymous">
 	</script>
 	<script src="../js/referencing-image.js"></script>
+	<script src="../js/add-values.js"></script>
 	<script>referencingImageShowcase('../images/book/')</script>
 </body>
 </html>
