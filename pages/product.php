@@ -74,7 +74,7 @@
 		<?php do{ ?>
 			<div class="book-infos">
 				<div class="title"><?=$row['titulo']?></div>
-				<div class="product-image"><img src="<?=$row['imagem']?>" alt="Capa do Livro" class="product-image img-book"></div>
+				<div class="product-image"><img src="<?=$row['imagem']?>" alt="Capa do Livro" class="product-image book-img"></div>
 				
 				<div class="details">
 					<div class="info">
@@ -133,6 +133,6 @@
 		crossorigin="anonymous">
 	</script>
 	<script src="../js/referencing-image.js"></script>
-	<script>referencingImageShowcase('../images/book/')</script>
+	<script>referencingImage('../images/book/')</script>
 </body>
 </html>

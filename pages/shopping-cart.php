@@ -110,6 +110,6 @@
 		}
 
 	</script>
-	<script>referencingImageShowcase('../images/book/')</script>
+	<script>referencingImage('../images/book/')</script>
 </body>
 </html>
