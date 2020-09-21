@@ -15,4 +15,5 @@ if((total) % 1 == 0){
 total = total.toString();
 total = total.replace('.',',');
 
-document.querySelector('.result-value').innerHTML = "Total: R$ " + total;
+let resultValueField = document.querySelector('.result-value');
+resultValueField.innerHTML = "Total: R$ " + total + resultValueField.innerHTML;

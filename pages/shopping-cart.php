@@ -94,7 +94,7 @@
 			?>
 			</tbody>
 		</table>
-		<div class="result-value"></div>
+		<div class="result-value"><button onclick="window.location.href='check-out.php'" class="confirm-request">Confirmar pedido</button></div>
 	</div>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/js/all.min.js"
