@@ -16,16 +16,23 @@ function referencingImageShowcase(imagesRoute){
 
 function referencingImage(imagesRoute){
 	const images = document.querySelectorAll('.book-img');
-	const numPastes = (imagesRoute.split('.').length) - 1;
 
 	images.forEach(image => {
 		let imgSrc = image.src;
-		let split = imgSrc.split('.');
+		let split = imgSrc.split('/');
+
+		console.log(split)
+
+		if(split[2] == 'books.google.com'){
+			return;
+		}
+
+		let imagePaste = split.length - 1;
+		let imageName = split[imagePaste];
 
 		if(split[1] != 'google'){
 			split =  imgSrc.split('/');
-			console.log(split)
-			image.src = imagesRoute + split[numPastes];
+			image.src = imagesRoute + imageName;
 		}
 	});
 }
