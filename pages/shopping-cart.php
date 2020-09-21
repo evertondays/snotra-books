@@ -79,7 +79,7 @@
 					<td class="table-authors"><?=$book_row['autores']?></td>
 					<td class="value">R$ <?=$book_row['valor']?></td>
 					<td class="table-button">
-						<a href="#" onclick="return confirmExclusion('<?=$row['titulo']?>')">
+						<a href="remove-item.php?id=<?=$book_row['id']?>" onclick="return confirmExclusion(`<?=$book_row['titulo']?>`)">
 							<button class="delete-button"><i class="fas fa-trash-alt fa-lg"></i></button>
 						</a>
 					</td>
@@ -103,6 +103,13 @@
 	</script>
 	<script src="../js/referencing-image.js"></script>
 	<script src="../js/add-values.js"></script>
+	<script>
+
+		function confirmExclusion(nome){
+			return confirm(`Você realmente deseja remover o livro '${nome}'?`);
+		}
+
+	</script>
 	<script>referencingImageShowcase('../images/book/')</script>
 </body>
 </html>
