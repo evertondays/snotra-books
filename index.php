@@ -135,7 +135,6 @@
 		crossorigin="anonymous">
 	</script>
 	<script src="js/referencing-image.js"></script>
-	<script src="js/search-form.js"></script>
 	<script>referencingImageShowcase('images/book/')</script>
 </body>
 </html>
