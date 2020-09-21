@@ -1,0 +1,93 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.table{
+  margin-top: 3rem;
+}
+
+table {
+  width: 100%;
+  font-size: 1.4rem;
+  border-collapse: collapse !important;
+  border-spacing: 0px;
+  color: #000;
+}
+
+td, th {
+  padding: 2rem;
+}
+
+thead{
+  border-top: 0.1rem solid var(--gray);
+  border-bottom: 0.25rem solid var(--gray);
+  font-family: Archivo, sans-serif
+}
+
+td, th{
+  text-align: left;
+  border-bottom: 1px solid var(--gray);
+}
+
+.title-table{
+  text-align: center;
+  overflow-wrap: break-word;
+}
+
+/* Imagem */
+.table-img img{
+  width: auto;
+  max-height: 96px;
+  border: 0.25rem solid var(--gray);
+  border-radius: 0.5rem;
+}
+
+/* Botão de delete */
+.delete-button {
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  background-color: var(--red);
+  transition: background-color 0.4s;
+
+  padding: 0.8rem 1rem;
+}
+
+.delete-button:hover{
+  background-color: var(--dark-red);
+}
+
+.table-button{
+  text-align: center;
+}
+
+/* Remoção de linhas em caso de tela pequena */
+.table-index{
+  display: none;
+}
+
+.table-img{
+  display: none;
+}
+
+@media (min-width: 700px) {
+  .table-index{
+    display: table-cell;
+  }
+
+  .table-img{
+    display: table-cell;
+  }
+}
+
+@media (max-width: 396px) {
+  .table-authors{
+    display: none;
+  }
+}

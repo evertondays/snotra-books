@@ -5,9 +5,14 @@
 	if(!isset($_SESSION['user_cli'])) {
 		header('Location: ../login.php');
 		exit();
-	} else {
-		$client_name = $_SESSION['user_name_cli'];
 	}
+
+	$client_name = $_SESSION['user_name_cli'];
+	$client_user = $_SESSION['user_cli'];
+
+	$data = mysql_query("SELECT * FROM `carrinho` WHERE userCliente = '$client_user'", $con) or die(mysql_error());
+	$row = mysql_fetch_assoc($data);
+	$total = mysql_num_rows($data);
 ?>
 
 <!doctype html>
@@ -25,7 +30,7 @@
 	<link rel="stylesheet" href="../css/global.css">
 	<link rel="stylesheet" href="../css/default.css">
 	<link rel="stylesheet" href="../css/menu.css">
-	<link rel="stylesheet" href="../css/book-showcase.css">
+	<link rel="stylesheet" href="../css/shopping-cart-table.css">
 	<link rel="stylesheet" href="../css/product.css">
 
 	<title>Carrinho de Compras - SnotraBooks</title>
@@ -42,8 +47,53 @@
 			</div>
 		</header>
 	</div>
-	<div class="content">
-		<center><h1>Olá, <?=$client_name?>!</h1></center>
+	<div class="container">
+		<center><h1 style="font-size: 3rem;">Olá, <?=$client_name?>!</h1></center>
+
+		<table class="table">
+			<thead>
+				<tr>
+					<th class="table-index">#</th>
+					<th class="table-img">Capa</th>
+					<th>Titulo</th>
+					<th class="table-authors">Autores</th>
+					<th>Valor</th>
+					<th class="table-button">DELETAR</th>
+				</tr>
+			</thead>
+			<tbody>
+			<?php 
+			if($total > 0) {
+				$index = 0;
+				do {
+					$book_id = $row['idProduto'];
+					$index++;
+
+					$book_data = mysql_query("SELECT * FROM `livros` WHERE id = '$book_id'", $con) or die(mysql_error());
+					$book_row = mysql_fetch_assoc($book_data);		
+			?>
+				<tr>
+					<th class="table-index"><?=$index?></th>
+					<td class="table-img"><img class="book-img" src="<?=$book_row['imagem']?>" alt="Capa do livro"></td>
+					<td class="title-table"><?=$book_row['titulo']?></td>
+					<td class="table-authors"><?=$book_row['autores']?></td>
+					<td>R$ <?=$book_row['valor']?></td>
+					<td class="table-button">
+						<a href="#" onclick="return confirmExclusion('<?=$row['titulo']?>')">
+							<button class="delete-button"><i class="fas fa-trash-alt fa-lg"></i></button>
+						</a>
+					</td>
+				</tr>
+			<?php
+				}while($row = mysql_fetch_assoc($data));
+			} else { ?>
+
+				<br><br><center><h1>Você não tem livros :(</h1></center>
+			
+			<?php }
+			?>
+			</tbody>
+		</table>
 	</div>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/js/all.min.js"
