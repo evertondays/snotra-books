@@ -31,7 +31,6 @@
 	<link rel="stylesheet" href="../css/default.css">
 	<link rel="stylesheet" href="../css/menu.css">
 	<link rel="stylesheet" href="../css/shopping-cart-table.css">
-	<link rel="stylesheet" href="../css/product.css">
 
 	<title>Carrinho de Compras - SnotraBooks</title>
 	<link size="25x25px" rel='shortcut icon' href="../images/favicon.ico" />
