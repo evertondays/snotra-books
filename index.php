@@ -54,8 +54,12 @@
 				} else {
 
 					$client_name = $_SESSION['user_name_cli'];
+					$client_user = $_SESSION['user_cli'];
 
-					?> <a href="pages/shopping-cart.php"><?=$client_name?> | Carrinho ()</a><?php
+					$total_products_data = mysql_query("SELECT id FROM `carrinho` WHERE userCliente = '$client_user'", $con);
+					$total_products = mysql_num_rows($total_products_data);
+
+					?> <a href="pages/shopping-cart.php"><?=$client_name?> | Carrinho (<?=$total_products?>)</a><?php
 				}
 				?>
 
@@ -78,8 +82,8 @@
 				<li onclick="window.location.href='index.php?category=<?=urlencode('Ciência')?>'">Ciência</li>
 				<li onclick="window.location.href='index.php?category=<?=urlencode('Contos')?>'">Contos</li>
 				<li onclick="window.location.href='index.php?category=<?=urlencode('Crônica')?>'">Crônica</li>
-				<li onclick="window.location.href='index.php?category=<?=urlencode('Ficção')?>'">Drama</li>
-				<li onclick="window.location.href='index.php?category=<?=urlencode('Ficção')?>'">Épico</li>
+				<li onclick="window.location.href='index.php?category=<?=urlencode('Drama')?>'">Drama</li>
+				<li onclick="window.location.href='index.php?category=<?=urlencode('Épico')?>'">Épico</li>
 				<li onclick="window.location.href='index.php?category=<?=urlencode('Fantasia')?>'">Fantasia</li>
 				<li onclick="window.location.href='index.php?category=<?=urlencode('Ficção')?>'">Ficção</li>
 				<li onclick="window.location.href='index.php?category=<?=urlencode('Ficção Ciêntifica')?>'">Ficção Ciêntifica</li>

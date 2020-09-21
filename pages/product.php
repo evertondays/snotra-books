@@ -58,8 +58,12 @@
 					?> <button onclick="window.location.href='login.php'">Entrar</button> <?php
 				} else {
 					$client_name = $_SESSION['user_name_cli'];
+					$client_user = $_SESSION['user_cli'];
 
-					?> <a href="shopping-cart.php"><?=$client_name?> | Carrinho ()</a><?php
+					$total_products_data = mysql_query("SELECT id FROM `carrinho` WHERE userCliente = '$client_user'", $con);
+					$total_products = mysql_num_rows($total_products_data);
+
+					?> <a href="shopping-cart.php"><?=$client_name?> | Carrinho (<?=$total_products?>)</a><?php
 				}
 				?>
 
