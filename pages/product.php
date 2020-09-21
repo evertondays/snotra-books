@@ -94,10 +94,9 @@
 						<h1>R$ <?=$row['valor']?></h1>
 					</div>
 				</div>
+
+				<button onclick="window.location.href='buy-item.php?idItem=<?=$row['id']?>'" class="buy-book button-product"><i style="margin-right: 1rem;" class="fas fa-shopping-cart fa-lg"></i>Adicionar ao carrinho</button>
 			</div>
-			<br><br>
-			<center><button onclick="window.location.href='buy-item.php?idItem=<?=$row['id']?>'" class="buy-book" style="padding: 2.5rem; width: 80%;"><i style="margin-right: 1rem;" class="fas fa-shopping-cart fa-lg"></i>Adicionar ao carrinho</button></center>
-			<br>
 			<div class="description">
 				<h2>Sinopse</h2>
 				<?=$row['descricao']?>
