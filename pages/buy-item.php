@@ -20,10 +20,23 @@
 		if(!isset($_SESSION['user_cli'])) {
 			header('Location: login.php');
 			exit();
-		} else {
-			$client_user = $_SESSION['user_cli'];
-			mysql_query("INSERT INTO carrinho (`userCliente`, `idProduto`) VALUES ('$client_user', '$idItem')", $con);
+		} 
+
+		// Verificando se não existe um livro igual no BD
+		$client_user = $_SESSION['user_cli'];
+
+		$items = mysql_query("SELECT id FROM `carrinho` WHERE userCliente = '$client_user' AND idProduto = '$idItem'", $con);
+		$total_items = mysql_num_rows($items);
+
+		if($total_items > 0){
+			header('Location: product.php?id='.$idItem);
+			exit();
 		}
+
+		// Inserindo no BD
+		$client_user = $_SESSION['user_cli'];
+		mysql_query("INSERT INTO carrinho (`userCliente`, `idProduto`) VALUES ('$client_user', '$idItem')", $con);
+		
 
 		header('Location: product.php?id='.$idItem);
 		exit();
