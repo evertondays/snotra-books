@@ -61,6 +61,12 @@ body {
   color: var(--text);
 }
 
+@media (min-width: 700px) {
+  :root {
+    font-size: 62.5%;
+  }
+}
+
 /* Ajuda para o JS */
 .invisible{
   display: none;
@@ -68,10 +74,4 @@ body {
 
 .invisible-important{
   display: none !important;
-}
-
-@media (min-width: 700px) {
-  :root {
-    font-size: 62.5%;
-  }
 }
