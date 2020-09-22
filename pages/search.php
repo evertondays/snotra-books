@@ -7,6 +7,6 @@
 	$query = mysql_real_escape_string($_GET['search-input']);
 	$query = urlencode($query);
 
-	header('Location: ../index.php?search='.$query);
+	header('Location: ../index.php?page=0&search='.$query);
 	exit();
 ?>
