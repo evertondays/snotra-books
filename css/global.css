@@ -66,6 +66,10 @@ body {
   display: none;
 }
 
+.invisible-important{
+  display: none !important;
+}
+
 @media (min-width: 700px) {
   :root {
     font-size: 62.5%;
