@@ -27,7 +27,6 @@
 	}
 
 	$data = mysql_query($query . " LIMIT 12 $ignore", $con) or die(mysql_error());
-	$bala = $query . " LIMIT 12 $ignore";
 	$row = mysql_fetch_assoc($data);
 	$total = mysql_num_rows($data);
 ?>
@@ -66,8 +65,6 @@
 				if(!isset($_SESSION['user_cli'])) {
 					?> <button onclick="window.location.href='pages/login.php'">Entrar</button> <?php
 				} else {
-					echo $bala . "<br>";
-
 					$client_name = $_SESSION['user_name_cli'];
 					$client_user = $_SESSION['user_cli'];
 
