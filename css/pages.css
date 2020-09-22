@@ -1,0 +1,30 @@
+.pages{
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  display: flex;
+}
+
+.page-block{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.4rem;
+  background: var(--white);
+  padding: 1rem;
+  border: 2px solid var(--primary);
+  border-radius: 0.4rem;
+  font-family: Archivo, sans-serif;
+  font-size: 1.1rem;
+  color: var(--primary);
+  cursor: pointer;
+  
+  transition: 0.2s;
+}
+
+.page-block:hover{
+  background: var(--white-dark);
+  border-color: var(--primary-dark);
+  color: var(--primary-dark);
+}
