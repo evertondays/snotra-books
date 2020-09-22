@@ -1,7 +1,19 @@
 <?php
 	require('server/connect.php');
 
+	// Pagina
+	if(isset($_GET['page'])){
+		$page = $_GET['page'];
+		if ($page <= 0){
+			$ignore = "";
+		} else {
+			$ignore = " OFFSET " . (12 * $page);
+		}
+	} else {
+		$ignore = "";
+	}
 
+	// Busca
 	if(isset($_GET['search'])){
 		$search = urldecode($_GET['search']);
 		$query = "SELECT id, titulo, valor, imagem, autores FROM livros WHERE titulo LIKE '%$search%'";
@@ -14,7 +26,8 @@
 		$query = 'SELECT id, titulo, valor, imagem, autores FROM livros';
 	}
 
-	$data = mysql_query($query . " LIMIT 12", $con) or die(mysql_error());
+	$data = mysql_query($query . " LIMIT 12 $ignore", $con) or die(mysql_error());
+	$bala = $query . " LIMIT 12 $ignore";
 	$row = mysql_fetch_assoc($data);
 	$total = mysql_num_rows($data);
 ?>
@@ -35,6 +48,7 @@
 	<link rel="stylesheet" href="css/default.css">
 	<link rel="stylesheet" href="css/menu.css">
 	<link rel="stylesheet" href="css/book-showcase.css">
+	<link rel="stylesheet" href="css/pages.css">
 
 	<title>Home - SnotraBooks</title>
 	<link size="25x25px" rel='shortcut icon' href="images/favicon.ico" />
@@ -52,6 +66,7 @@
 				if(!isset($_SESSION['user_cli'])) {
 					?> <button onclick="window.location.href='pages/login.php'">Entrar</button> <?php
 				} else {
+					echo $bala . "<br>";
 
 					$client_name = $_SESSION['user_name_cli'];
 					$client_user = $_SESSION['user_cli'];
@@ -74,24 +89,24 @@
 		</div>
 		<div class="categories invisible">
 			<ul>
-				<li onclick="window.location.href='index.php?category=<?=urlencode('Ação')?>'">Ação</li>
-				<li onclick="window.location.href='index.php?category=<?=urlencode('Antologias')?>'">Antologias</li>
-				<li onclick="window.location.href='index.php?category=<?=urlencode('Autoajuda')?>'">Autoajuda</li>
-				<li onclick="window.location.href='index.php?category=<?=urlencode('Aventura')?>'">Aventura</li>
-				<li onclick="window.location.href='index.php?category=<?=urlencode('Biografia')?>'">Biografia</li>
-				<li onclick="window.location.href='index.php?category=<?=urlencode('Ciência')?>'">Ciência</li>
-				<li onclick="window.location.href='index.php?category=<?=urlencode('Contos')?>'">Contos</li>
-				<li onclick="window.location.href='index.php?category=<?=urlencode('Crônica')?>'">Crônica</li>
-				<li onclick="window.location.href='index.php?category=<?=urlencode('Drama')?>'">Drama</li>
-				<li onclick="window.location.href='index.php?category=<?=urlencode('Épico')?>'">Épico</li>
-				<li onclick="window.location.href='index.php?category=<?=urlencode('Fantasia')?>'">Fantasia</li>
-				<li onclick="window.location.href='index.php?category=<?=urlencode('Ficção')?>'">Ficção</li>
-				<li onclick="window.location.href='index.php?category=<?=urlencode('Ficção Ciêntifica')?>'">Ficção Ciêntifica</li>
-				<li onclick="window.location.href='index.php?category=<?=urlencode('Horror')?>'">Horror</li>
-				<li onclick="window.location.href='index.php?category=<?=urlencode('Infantojuvenil')?>'">Infantojuvenil</li>
-				<li onclick="window.location.href='index.php?category=<?=urlencode('Infantil')?>'">Infantil</li>
-				<li onclick="window.location.href='index.php?category=<?=urlencode('Romance')?>'">Romance</li>
-				<li onclick="window.location.href='index.php?category=<?=urlencode('Hístoria')?>'">Hístoria</li>
+				<li onclick="window.location.href='index.php?page=0&category=<?=urlencode('Ação')?>'">Ação</li>
+				<li onclick="window.location.href='index.php?page=0&category=<?=urlencode('Antologias')?>'">Antologias</li>
+				<li onclick="window.location.href='index.php?page=0&category=<?=urlencode('Autoajuda')?>'">Autoajuda</li>
+				<li onclick="window.location.href='index.php?page=0&category=<?=urlencode('Aventura')?>'">Aventura</li>
+				<li onclick="window.location.href='index.php?page=0&category=<?=urlencode('Biografia')?>'">Biografia</li>
+				<li onclick="window.location.href='index.php?page=0&category=<?=urlencode('Ciência')?>'">Ciência</li>
+				<li onclick="window.location.href='index.php?page=0&category=<?=urlencode('Contos')?>'">Contos</li>
+				<li onclick="window.location.href='index.php?page=0&category=<?=urlencode('Crônica')?>'">Crônica</li>
+				<li onclick="window.location.href='index.php?page=0&category=<?=urlencode('Drama')?>'">Drama</li>
+				<li onclick="window.location.href='index.php?page=0&category=<?=urlencode('Épico')?>'">Épico</li>
+				<li onclick="window.location.href='index.php?page=0&category=<?=urlencode('Fantasia')?>'">Fantasia</li>
+				<li onclick="window.location.href='index.php?page=0&category=<?=urlencode('Ficção')?>'">Ficção</li>
+				<li onclick="window.location.href='index.php?page=0&category=<?=urlencode('Ficção Ciêntifica')?>'">Ficção Ciêntifica</li>
+				<li onclick="window.location.href='index.php?page=0&category=<?=urlencode('Horror')?>'">Horror</li>
+				<li onclick="window.location.href='index.php?page=0&category=<?=urlencode('Infantojuvenil')?>'">Infantojuvenil</li>
+				<li onclick="window.location.href='index.php?page=0&category=<?=urlencode('Infantil')?>'">Infantil</li>
+				<li onclick="window.location.href='index.php?page=0&category=<?=urlencode('Romance')?>'">Romance</li>
+				<li onclick="window.location.href='index.php?page=0&category=<?=urlencode('Hístoria')?>'">Hístoria</li>
 			</ul>
 		</div>
 	</div>
@@ -129,11 +144,18 @@
 
 		<?php } ?>
 
+		<div class="pages">
+			<div id="previous-btn" class="page-block">Anterior</div>
+			<div class="page-block" id="current-btn"></div>
+			<div id="next-btn" class="page-block">Proximo</div>
+		</div>
+
 	<script src="js/menu.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/js/all.min.js"
 		integrity="sha512-M+hXwltZ3+0nFQJiVke7pqXY7VdtWW2jVG31zrml+eteTP7im25FdwtLhIBTWkaHRQyPrhO2uy8glLMHZzhFog=="
 		crossorigin="anonymous">
 	</script>
+	<script src="js/pagination.js"></script>
 	<script src="js/referencing-image.js"></script>
 	<script>referencingImageShowcase('images/book/')</script>
 </body>
