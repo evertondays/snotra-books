@@ -48,6 +48,7 @@
 	<link rel="stylesheet" href="css/menu.css">
 	<link rel="stylesheet" href="css/book-showcase.css">
 	<link rel="stylesheet" href="css/pages.css">
+	<link rel="stylesheet" href="css/footer.css">
 
 	<title>Home - SnotraBooks</title>
 	<link size="25x25px" rel='shortcut icon' href="images/favicon.ico" />
@@ -141,11 +142,12 @@
 
 		<?php } ?>
 
-		<div class="pages">
-			<div id="previous-btn" class="page-block">Anterior</div>
-			<div class="page-block" id="current-btn"></div>
-			<div id="next-btn" class="page-block">Proximo</div>
-		</div>
+	<div class="pages">
+		<div id="previous-btn" class="page-block">Anterior</div>
+		<div class="page-block" id="current-btn"></div>
+		<div id="next-btn" class="page-block">Proximo</div>
+	</div>
+	<?php include('models/footer.php') ?>
 
 	<script src="js/menu.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/js/all.min.js"

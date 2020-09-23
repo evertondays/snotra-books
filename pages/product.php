@@ -40,6 +40,7 @@
 	<link rel="stylesheet" href="../css/menu.css">
 	<link rel="stylesheet" href="../css/book-showcase.css">
 	<link rel="stylesheet" href="../css/product.css">
+	<link rel="stylesheet" href="../css/footer.css">
 
 	<title>SnotraBooks</title>
 	<link size="25x25px" rel='shortcut icon' href="../images/favicon.ico" />
@@ -126,6 +127,8 @@
 			<?php } while($row = mysql_fetch_assoc($data)); ?>
 		</div>
 	</div>
+
+	<?php include('../models/footer.php') ?>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/js/all.min.js"
 		integrity="sha512-M+hXwltZ3+0nFQJiVke7pqXY7VdtWW2jVG31zrml+eteTP7im25FdwtLhIBTWkaHRQyPrhO2uy8glLMHZzhFog=="
