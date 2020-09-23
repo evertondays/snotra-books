@@ -3,7 +3,7 @@
 	require('../server/connect.php');
 
 	if(!isset($_SESSION['user_cli'])) {
-		header('Location: ../login.php');
+		header('Location: login.php');
 		exit();
 	}
 
@@ -34,7 +34,7 @@
 	<title>Finalizar Pedido - SnotraBooks</title>
 	<link size="25x25px" rel='shortcut icon' href="../images/favicon.ico" />
 </head>
-<body style="background-image: url('../../images/wallpaper-3.jpg') !important;">
+<body style="background-image: url('../../images/wallpaper-3.png') !important;">
 	<div class="container">
 		<div class="login-wrapper">
 			<h1>A compra foi realizada com sucesso!</h1><br>
