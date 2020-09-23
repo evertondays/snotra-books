@@ -63,7 +63,8 @@
 
 			<div class="input-group">
 				<label for="input-category">Categoria</label>
-				<select id="input-category" name="category" value="<?=$row['categoria']?>">
+				<select id="input-category" name="category">
+					<option value="<?=$row['categoria']?>"><?=$row['categoria']?></option>
 					<option value="Ação">Ação</option>
 					<option value="Antologias">Antologias</option>
 					<option value="Autoajuda">Autoajuda</option>
