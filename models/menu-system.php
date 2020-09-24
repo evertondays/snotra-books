@@ -1,3 +1,4 @@
+<?php // Sistema de menu ?>
 <div class="menu">
 	<div class="left">
 		<a class="option" href="../../../index.php">SnotraBooks</a>
