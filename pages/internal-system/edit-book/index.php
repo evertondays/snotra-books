@@ -32,6 +32,12 @@
 
 	<title>Edição de Livro - SnotraBooks</title>
 	<link size="25x25px" rel='shortcut icon' href="../../../images/favicon-gear.ico" />
+
+	<style>
+		.alert-change{
+			border-color: var(--yellow) !important;
+		}
+	</style>
 </head>
 <body>
 
@@ -43,27 +49,27 @@
 
 			<div class="input-group">
 				<label for="input-title">Título</label>
-				<input id="input-title" name="title" type="text" required value="<?=$row['titulo']?>">
+				<input onkeyup="changeAlert('<?=$row['titulo']?>', 'input-title')" id="input-title" name="title" type="text" required value="<?=$row['titulo']?>">
 			</div>
 
 			<div class="input-group">
 				<label for="input-authors">Autores</label>
-				<input id="input-authors" name="authors" type="text" required value="<?=$row['autores']?>">
+				<input onkeyup="changeAlert('<?=$row['autores']?>', 'input-authors')" id="input-authors" name="authors" type="text" required value="<?=$row['autores']?>">
 			</div>
 
 			<div class="input-group">
 				<label for="input-description">Descrição</label>
-				<textarea id="input-description" name="description" rows="7" type="text" required ><?=$row['descricao']?></textarea>
+				<textarea onkeyup="changeAlert('<?=$row['descricao']?>', 'input-description')" id="input-description" name="description" rows="7" type="text" required ><?=$row['descricao']?></textarea>
 			</div>
 
 			<div class="input-group">
 				<label for="input-date">Ano de lançamento</label>
-				<input id="input-date" name="date" class="year" type="text" value="<?=$row['ano']?>" required>
+				<input onkeyup="changeAlert('<?=$row['ano']?>', 'input-date')" id="input-date" name="date" class="year" type="text" value="<?=$row['ano']?>" required>
 			</div>
 
 			<div class="input-group">
 				<label for="input-category">Categoria</label>
-				<select id="input-category" name="category">
+				<select onchange="changeAlert('<?=$row['categoria']?>', 'input-category')" id="input-category" name="category">
 					<option value="<?=$row['categoria']?>"><?=$row['categoria']?></option>
 					<option value="Ação">Ação</option>
 					<option value="Antologias">Antologias</option>
@@ -88,7 +94,7 @@
 
 			<div class="input-group">
 				<label for="input-value">Valor</label>
-				<input id="input-value" name="value" class="money" type="text" required value="<?=$row['valor']?>">
+				<input onkeyup="changeAlert('<?=$row['valor']?>', 'input-value')" id="input-value" name="value" class="money" type="text" required value="<?=$row['valor']?>">
 			</div>
 
 			<div class="input-group-img">
@@ -105,6 +111,7 @@
 		crossorigin="anonymous">
 	</script>
 	<script src="../../../js/referencing-image.js"></script>
+	<script src="../../../js/change-value-alert.js"></script>
 	<script>referencingImage('../../../images/book/')</script>
 
 	<!-- Mascara de Valor -->
