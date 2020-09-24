@@ -48,6 +48,8 @@
 			</form>
 			<br>ou<br>
 			<button onclick="window.location.href='register.php'" class="btn-register">Cadastrar</button>
+			<br>
+			<a href="../index.php">Voltar para home</a>
 		</div>
 	</div>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/js/all.min.js"

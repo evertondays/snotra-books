@@ -39,6 +39,8 @@
 				
 				<button type="submit" class="btn">Cadastrar</button>
 			</form>
+			<br>
+			<a href="login.php">Voltar para o login</a>
 		</div>
 	</div>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/js/all.min.js"
@@ -47,10 +49,5 @@
 	</script>
 </body>
 </html>
-
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/js/all.min.js"
-		integrity="sha512-M+hXwltZ3+0nFQJiVke7pqXY7VdtWW2jVG31zrml+eteTP7im25FdwtLhIBTWkaHRQyPrhO2uy8glLMHZzhFog=="
-		crossorigin="anonymous">
-	</script>
 </body>
 </html>
