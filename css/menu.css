@@ -122,7 +122,14 @@
   border-color: var(--gray);
   color: var(--gray);
 }
-  
+
+.account-link{
+  display: inline;
+}
+
+.account-link-part{
+  display: none;
+}
 
 @media screen and (min-width: 800px) {
   #menu{
@@ -134,6 +141,10 @@
   #menu header{
     align-items: center;
     padding: 2rem 2rem;
+  }
+
+  .account-link-part{
+    display: inline;
   }
 
   .search{
