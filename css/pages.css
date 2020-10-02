@@ -28,3 +28,10 @@
   border-color: var(--primary-dark);
   color: var(--primary-dark);
 }
+
+#current-btn:hover{
+  cursor: default !important;
+  border-color: var(--primary);
+  background: var(--white) !important;
+  color: var(--primary);
+}

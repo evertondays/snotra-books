@@ -7,6 +7,7 @@
 #menu header{
   display: flex;
   justify-content: space-between;
+  align-items: center;
   font-size: 2rem;
 }
 
@@ -59,17 +60,25 @@
   color: var(--text);
 }
 
-.categories li{
+.categories ul{
+  display: flex;
+  flex-direction: column;
+}
+
+.categories button{
   list-style: none;
   font-size: 2rem;
   cursor: pointer;
+  background: none;
+  border: none;
+  text-align: left;
 }
 
-.categories li + li{
+.categories button + button{
   margin-top: 0.9rem;
 }
 
-.categories li label{
+.categories button label{
   margin-left: 1rem;
   font-size: 1.4rem;
   
@@ -188,11 +197,11 @@
     justify-content: center;
   }
 
-  .categories li + li{
+  .categories button + button{
     margin-top: 0;
   }
 
-  .categories li{
+  .categories button{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -203,12 +212,13 @@
     padding: 1rem;
     font-size: 1.5rem;
     cursor: pointer;
+    border: none;
     white-space: nowrap;
 
     transition: background-color 0.4s;
   }
 
-  .categories li:hover{
+  .categories button:hover{
     background-color: var(--white-dark);
   }
 }

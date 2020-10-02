@@ -87,24 +87,24 @@
 		</div>
 		<div class="categories invisible">
 			<ul>
-				<li onclick="window.location.href='index.php?page=0&category=<?=urlencode('Ação')?>'">Ação</li>
-				<li onclick="window.location.href='index.php?page=0&category=<?=urlencode('Antologias')?>'">Antologias</li>
-				<li onclick="window.location.href='index.php?page=0&category=<?=urlencode('Autoajuda')?>'">Autoajuda</li>
-				<li onclick="window.location.href='index.php?page=0&category=<?=urlencode('Aventura')?>'">Aventura</li>
-				<li onclick="window.location.href='index.php?page=0&category=<?=urlencode('Biografia')?>'">Biografia</li>
-				<li onclick="window.location.href='index.php?page=0&category=<?=urlencode('Ciência')?>'">Ciência</li>
-				<li onclick="window.location.href='index.php?page=0&category=<?=urlencode('Contos')?>'">Contos</li>
-				<li onclick="window.location.href='index.php?page=0&category=<?=urlencode('Crônica')?>'">Crônica</li>
-				<li onclick="window.location.href='index.php?page=0&category=<?=urlencode('Drama')?>'">Drama</li>
-				<li onclick="window.location.href='index.php?page=0&category=<?=urlencode('Épico')?>'">Épico</li>
-				<li onclick="window.location.href='index.php?page=0&category=<?=urlencode('Fantasia')?>'">Fantasia</li>
-				<li onclick="window.location.href='index.php?page=0&category=<?=urlencode('Ficção')?>'">Ficção</li>
-				<li onclick="window.location.href='index.php?page=0&category=<?=urlencode('Ficção Ciêntifica')?>'">Ficção Ciêntifica</li>
-				<li onclick="window.location.href='index.php?page=0&category=<?=urlencode('Horror')?>'">Horror</li>
-				<li onclick="window.location.href='index.php?page=0&category=<?=urlencode('Infantojuvenil')?>'">Infantojuvenil</li>
-				<li onclick="window.location.href='index.php?page=0&category=<?=urlencode('Infantil')?>'">Infantil</li>
-				<li onclick="window.location.href='index.php?page=0&category=<?=urlencode('Romance')?>'">Romance</li>
-				<li onclick="window.location.href='index.php?page=0&category=<?=urlencode('Hístoria')?>'">Hístoria</li>
+				<button onclick="window.location.href='index.php?page=0&category=<?=urlencode('Ação')?>'">Ação</button>
+				<button onclick="window.location.href='index.php?page=0&category=<?=urlencode('Antologias')?>'">Antologias</button>
+				<button onclick="window.location.href='index.php?page=0&category=<?=urlencode('Autoajuda')?>'">Autoajuda</button>
+				<button onclick="window.location.href='index.php?page=0&category=<?=urlencode('Aventura')?>'">Aventura</button>
+				<button onclick="window.location.href='index.php?page=0&category=<?=urlencode('Biografia')?>'">Biografia</button>
+				<button onclick="window.location.href='index.php?page=0&category=<?=urlencode('Ciência')?>'">Ciência</button>
+				<button onclick="window.location.href='index.php?page=0&category=<?=urlencode('Contos')?>'">Contos</button>
+				<button onclick="window.location.href='index.php?page=0&category=<?=urlencode('Crônica')?>'">Crônica</button>
+				<button onclick="window.location.href='index.php?page=0&category=<?=urlencode('Drama')?>'">Drama</button>
+				<button onclick="window.location.href='index.php?page=0&category=<?=urlencode('Épico')?>'">Épico</button>
+				<button onclick="window.location.href='index.php?page=0&category=<?=urlencode('Fantasia')?>'">Fantasia</button>
+				<button onclick="window.location.href='index.php?page=0&category=<?=urlencode('Ficção')?>'">Ficção</button>
+				<button onclick="window.location.href='index.php?page=0&category=<?=urlencode('Ficção Ciêntifica')?>'">Ficção Ciêntifica</button>
+				<button onclick="window.location.href='index.php?page=0&category=<?=urlencode('Horror')?>'">Horror</button>
+				<button onclick="window.location.href='index.php?page=0&category=<?=urlencode('Infantojuvenil')?>'">Infantojuvenil</button>
+				<button onclick="window.location.href='index.php?page=0&category=<?=urlencode('Infantil')?>'">Infantil</button>
+				<button onclick="window.location.href='index.php?page=0&category=<?=urlencode('Romance')?>'">Romance</button>
+				<button onclick="window.location.href='index.php?page=0&category=<?=urlencode('Hístoria')?>'">Hístoria</button>
 			</ul>
 		</div>
 	</div>
@@ -143,9 +143,9 @@
 		<?php } ?>
 
 	<div class="pages">
-		<div id="previous-btn" class="page-block">Anterior</div>
-		<div class="page-block" id="current-btn"></div>
-		<div id="next-btn" class="page-block">Proximo</div>
+		<button id="previous-btn" class="page-block">Anterior</button>
+		<button id="current-btn" class="page-block"></button>
+		<button id="next-btn" class="page-block">Proximo</button>
 	</div>
 	<?php include('models/footer.php') ?>
 
