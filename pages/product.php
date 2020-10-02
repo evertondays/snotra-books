@@ -64,7 +64,7 @@
 					$total_products_data = mysql_query("SELECT id FROM `carrinho` WHERE userCliente = '$client_user'", $con);
 					$total_products = mysql_num_rows($total_products_data);
 
-					?> <a class="account-link" href="pages/shopping-cart.php"><?=$client_name?> <div class="account-link-part">| Carrinho (<?=$total_products?>)</div></a><?php
+					?> <a class="account-link" href="shopping-cart.php"><?=$client_name?> <div class="account-link-part">| Carrinho (<?=$total_products?>)</div></a><?php
 				}
 				?>
 
