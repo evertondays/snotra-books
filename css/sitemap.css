@@ -1,0 +1,21 @@
+.container {
+  padding: 3rem;
+}
+
+.wrapper{
+  margin-bottom: 5rem;
+  text-align: justify;
+  word-break: break-word;
+  font-size: 2rem;
+}
+
+.wrapper a{
+  font-size: 3rem;
+  font-family: Archivo, sans-serif;
+  font-weight: bold;
+  color: var(--text);
+}
+
+.wrapper a:hover {
+  text-decoration: underline;
+}
