@@ -26,7 +26,6 @@ if(url.indexOf('page=') == -1){
 } else {
 	urlSplit = urlSplit[1];
 	let currentPage = parseInt(urlSplit[0]);
-	console.log(currentPage)
 
 	urlSplit = url.split('&');
 	let urlBody = "";
@@ -41,10 +40,9 @@ if(url.indexOf('page=') == -1){
 	}
 
 	previousBtn.addEventListener('click', () =>{
-		window.location.href = urlMain + "page=" + (currentPage - 1);
+		window.location.href = urlMain + "page=" + (currentPage - 1) + urlBody;
 	})
 	nextBtn.addEventListener('click', () =>{
-		console.log(urlMain + "page=" + (currentPage + 1) + "?" + urlBody)
 		window.location.href = urlMain + "page=" + (currentPage + 1) + urlBody;
 	})
 
