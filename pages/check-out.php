@@ -68,7 +68,7 @@
 				<a style="color: var(--white);" href="../index.php">SnotraBooks</a>
 			</div>
 			<div class="user-info">
-				<a href="shopping-cart.php"><i class="fas fa-arrow-left" style="margin-right: 5px"></i> Voltar para o carrinho</i></a>
+				<a href="shopping-cart.php"><i class="fas fa-arrow-left" style="margin-right: 5px"></i> Voltar</i></a>
 			</div>
 		</header>
 	</div>
@@ -127,7 +127,7 @@
 				<input type="radio" name="radio">
 			</label>
 		</div>
-
+		
 		<div class="check-out">
 			Você tem <?=$total_products?> produtos no valor total de R$ <?=$total?>
 			<button type="button" onclick="window.location.href='check-out-exec.php'" class="confirm-request">Finalizar compra</button>
