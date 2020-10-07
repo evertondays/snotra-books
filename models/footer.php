@@ -31,6 +31,9 @@
 				</div>
 			</div>
 		</div>
+		<div class="bottom link">
+			<a href="sitemap.php">Mapa do Site <i class="fas fa-map-signs"></i></a>
+		</div>
 		<div class="bottom">
 			<a href="https://github.com/Lemon42/snotra-books">feito com ❤️ e PHP</a>
 		</div>

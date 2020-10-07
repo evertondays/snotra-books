@@ -49,6 +49,15 @@ footer .bottom{
   font-size: 1.2rem;
 }
 
+footer .link{
+  background-color: var(--primary) !important;
+  font-size: 1.5rem !important;
+}
+
+footer .link:hover{
+  text-decoration: underline;
+}
+
 /* Linha do footer */
 .footer-line{
   width: 100%;
