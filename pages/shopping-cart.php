@@ -3,7 +3,7 @@
 	require('../server/connect.php');
 
 	if(!isset($_SESSION['user_cli'])) {
-		header('Location: ../login.php');
+		header('Location: login.php');
 		exit();
 	}
 
