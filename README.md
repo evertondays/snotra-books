@@ -4,7 +4,7 @@ Livraria digital feita com PHP e MySQL, utilizando técnicas de Mobile First par
 
 ![enter image description here](https://i.imgur.com/ka3fUAW.png)
 
-Para rodar a aplicação é necessário um servidor Apache e de um banco de dados MySQL, para conectar o site ao banco de dados é necessário criar um arquivo chamado`credentials.php`, que se encontra dentro da pasta "server", alterando nele as variáveis de senha e o usuário do MySQL.
+Para rodar a aplicação é necessário um servidor Apache e de um banco de dados MySQL, para conectar o site ao banco de dados é necessário criar um arquivo chamado `credentials.php`, que se encontra dentro da pasta "server", alterando nele as variáveis de senha e o usuário do MySQL.
 
 Trabalho feito na instituição Etec Vasco Antônio Venchiarutti como requisito para obtenção de nota na disciplina de Programação Web, solicitado pelos professores Monica Rezende e Ronildo Ferreira.
 
